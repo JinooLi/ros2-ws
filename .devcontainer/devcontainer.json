@@ -1,5 +1,5 @@
 {
-  "name": "f1tenth",
+  "name": "ros2-ws",
   "build": {
     "dockerfile": "Dockerfile",
     "context": "."
