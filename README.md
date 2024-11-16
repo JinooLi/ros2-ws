@@ -42,4 +42,4 @@ ROS2는 같은 서브넷 안에 있는 모든 ROS2 노드들 끼리 통신이 �
     ```
     [출처](https://learn.microsoft.com/ko-kr/windows/wsl/wsl-config)
 3. wsl이 켜져있으면 껐다 켠다.  
-4. 나머지 wsl상에서 할 것은 리눅스와 동일한다.
+4. 나머지 wsl상에서 할 것은 리눅스와 동일하다.
