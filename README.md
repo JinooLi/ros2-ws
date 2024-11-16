@@ -10,9 +10,9 @@ ros2 개발 환경을 구성하는 제일 기초적인 부분. 사용 방법은 
 6. `Ctrl + Shift + P`로 vscode 명령창을 열어 rebuild 검색. Rebuild Container 실행
 
 ## 윈도우에서.
-1. wsl2를 깐다.(되도록 윈도우 11이면 좋다. 이유는 후술.)
-2. wsl2에 우분투 설치.
-3. wsl2 내부에 docker를 설치한다.(윈도우 위에 깔기 위해 docker desktop을 까는 것과 다르다.)
+1. WSL2를 깐다.(되도록 윈도우 11이면 좋다. 이유는 후술.)
+2. WSL2에 우분투 설치.
+3. WSL2 내부에 docker를 설치한다.(윈도우 위에 깔기 위해 docker desktop을 까는 것과 다르다.)
     ```shell
     curl -fsSL https://get.docker.com -o get-docker.sh
     sudo sh ./get-docker.sh
@@ -37,12 +37,17 @@ ROS2는 같은 서브넷 안에 있는 모든 ROS2 노드들 끼리 통신이 �
 ### 윈도우에서.
 이 기능은 윈도우 11에서만 된다.
 1. `C:\Users\<사용자 이름>` 안에 `.wslconfig`파일을 만든다.
-2. 그 안에 다음과 같이 wsl 옵션을 준다. 이 옵션은 wsl이 미러링 모드로 동작하도록 한다. 미러링 모드는 wsl의 ip가 호스트의 ip와 같아지도록 한다.
+2. 그 안에 다음과 같이 WSL2 옵션을 준다. 이 옵션은 WSL이 미러링 모드로 동작하도록 한다. 미러링 모드는 wsl의 ip가 호스트의 ip와 같아지도록 한다.
     ```txt
     [wsl2]
 
     networkingMode=mirrored
     ```
     [출처](https://learn.microsoft.com/ko-kr/windows/wsl/wsl-config)
-3. wsl이 켜져있으면 껐다 켠다.  
-4. 나머지 wsl상에서 할 것은 리눅스와 동일하다.
+3. powershell에서 다음 명령어를 입력하여 Hyper-V 방화벽 설정을 한다.
+    ```powershell
+    Set-NetFirewallHyperVVMSetting -Name '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' -DefaultInboundAction Allow
+    ```
+    [출처](https://learn.microsoft.com/ko-kr/windows/wsl/networking)
+4. WSL이 켜져있으면 껐다 켠다.  
+5. 나머지 WSL상에서 할 것은 리눅스와 동일하다.
