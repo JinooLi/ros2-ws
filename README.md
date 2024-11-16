@@ -24,7 +24,10 @@ ros2 개발 환경을 구성하는 제일 기초적인 부분. 사용 방법은 
 7. 레포지토리를 clone한 디렉토리를 vscode로 연다. `code .`
 8. `Ctrl + Shift + P`로 vscode 명령창을 열어 rebuild 검색. Rebuild Container 실행
 
-
+### 만약 docker desktop이 이미 깔려있는 경우.
+1. docker desktop 삭제.
+2. wsl이 있다면 wsl안의 `~/`에 있는 docker 관련 파일 삭제.
+3. 위의 단계 적절히 시작(당연히 wsl을 지울 필요는 없음.)
 
 
 ## 네트워크 설정
